@@ -28,5 +28,5 @@ python setup.py install
 apt-get install -y arping tcpdump fakeroot
 
 # init avocado-vt
-avocado vt-bootstrap
+avocado vt-bootstrap --vt-skip-verify-download-assets
 
