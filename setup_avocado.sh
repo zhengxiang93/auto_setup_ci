@@ -2,7 +2,7 @@
 # install requirements for avocado
 apt-get install -y python git gcc python-dev libvirt-dev \
         libffi-dev libssl-dev libyaml-dev xz-utils \
-        liblzma-dev make \
+        liblzma-dev make python-libvirt \
 
 # install newest python pip
 wget https://bootstrap.pypa.io/get-pip.py
@@ -19,13 +19,17 @@ make link
 
 # install avocado-vt plugin
 cd ..
-git clone https://github.com/avocado-framework/avocado-vt.git
+git clone -b dev-58.0 https://github.com/zhengxiang93/avocado-vt.git
 cd avocado-vt
 make requirements
 python setup.py install
 
 # install tools for avocado-vt
-apt-get install -y arping tcpdump fakeroot
+apt-get install -y arping tcpdump fakeroot qemu debootstrap \
+                   expect parted kpartx
+
+modprobe nbd
+ln -s /usr/bin/qemu-system-aarch64 /usr/bin/qemu-kvm
 
 # init avocado-vt
 avocado vt-bootstrap --vt-skip-verify-download-assets
