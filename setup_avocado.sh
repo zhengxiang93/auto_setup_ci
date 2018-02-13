@@ -26,10 +26,11 @@ python setup.py install
 
 # install tools for avocado-vt
 apt-get install -y arping tcpdump fakeroot qemu debootstrap \
-                   expect parted kpartx
+                   expect parted kpartx qemu-efi bridge-utils \
 
 modprobe nbd
 ln -s /usr/bin/qemu-system-aarch64 /usr/bin/qemu-kvm
+export PATH=/root/.local/bin:$PATH
 
 # init avocado-vt
 avocado vt-bootstrap --vt-skip-verify-download-assets
