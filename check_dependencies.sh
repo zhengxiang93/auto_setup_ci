@@ -25,4 +25,4 @@ do
 	fi
 done
 
-
+echo "All denpendencies is ok!"

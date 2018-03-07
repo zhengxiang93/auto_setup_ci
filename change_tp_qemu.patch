@@ -1,0 +1,12 @@
+diff --git a/test-providers.d/io-github-autotest-qemu.ini b/test-providers.d/io-github-autotest-qemu.ini
+index 78c039f..9da17fe 100644
+--- a/test-providers.d/io-github-autotest-qemu.ini
++++ b/test-providers.d/io-github-autotest-qemu.ini
+@@ -1,5 +1,6 @@
+ [provider]
+-uri: https://github.com/autotest/tp-qemu.git
++uri: https://github.com/zhengxiang93/tp-qemu.git
++branch: dev
+ [generic]
+ subdir: generic/
+ [multi_host_migration]
