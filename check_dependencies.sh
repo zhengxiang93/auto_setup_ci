@@ -25,4 +25,8 @@ do
 	fi
 done
 
+if [[ ! -e "/usr/share/AAVMF/AAVMF_CODE.fd" ]] || [[ ! -e "/usr/share/AAVMF/AAVMF_VARS.fd" ]]; then
+        error_exit "cannot find AAVMF_CODE.fd or AAVMF_VARS.fd; do you have qemu-efi?"
+fi
+
 echo "All denpendencies is ok!"
