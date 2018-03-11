@@ -22,9 +22,10 @@ cp -r ~/.local/lib/python2.7/site-packages/usr/share/avocado-plugins-vt/* \
       ~/.local/lib/python2.7/site-packages/
 
 # copy some configurations files
-cp Ubuntu-16-04-3.preseed ~/.local/lib/python2.7/site-packages/shared/unattended/
-cp ubuntu-16.04.3-server-aarch64.ini ~/.local/lib/python2.7/site-packages/shared/downloads/
+cp *.preseed ~/.local/lib/python2.7/site-packages/shared/unattended/
+cp *.ini ~/.local/lib/python2.7/site-packages/shared/downloads/
 cp 16.04.3-server.aarch64.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Ubuntu
+cp 9.3.0.aarch64.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Debian
 
 # after upstream, remove it
 cp tmp.patch change_tp_qemu.patch ~/.local/lib/python2.7/site-packages/
