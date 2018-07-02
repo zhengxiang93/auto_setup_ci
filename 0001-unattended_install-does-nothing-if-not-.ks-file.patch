@@ -1,0 +1,29 @@
+From 365913167a9d116076d2207a24e307c331faec28 Mon Sep 17 00:00:00 2001
+From: Zheng Xiang <xiang.zheng@linaro.org>
+Date: Tue, 6 Feb 2018 20:20:50 +0800
+Subject: [PATCH] unattended_install: does nothing if not .ks file
+
+If unattended file is not a kickstart file, dest_fname would be used
+but not declared. So add this patch to fix it.
+
+Signed-off-by: Zheng Xiang <xiang.zheng@linaro.org>
+---
+ virttest/tests/unattended_install.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/virttest/tests/unattended_install.py b/virttest/tests/unattended_install.py
+index 5c8d9b2..109319b 100644
+--- a/virttest/tests/unattended_install.py
++++ b/virttest/tests/unattended_install.py
+@@ -676,6 +676,8 @@ class UnattendedInstallConfig(object):
+ 
+             start_unattended_server_thread(self.unattended_server_port,
+                                            self.tmpdir)
++        else:
++            return
+ 
+         # Point installation to this kickstart url
+         unattended_file_url = 'http://%s:%s/%s' % (self.url_auto_content_ip,
+-- 
+1.9.1
+
