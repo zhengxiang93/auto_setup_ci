@@ -25,7 +25,7 @@ cp -r ~/.local/lib/python2.7/site-packages/usr/share/avocado-plugins-vt/* \
       ~/.local/lib/python2.7/site-packages/
 
 # copy some configurations files
-sed -i 's#proxy string.*#proxy string'"$HTTP_PROXY"'#' *.preseed
+sed -i 's#proxy string.*#proxy string '"$HTTP_PROXY"'#' *.preseed
 cp *.preseed ~/.local/lib/python2.7/site-packages/shared/unattended/
 cp *.ini ~/.local/lib/python2.7/site-packages/shared/downloads/
 cp 16.04.3-server.aarch64.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Ubuntu
