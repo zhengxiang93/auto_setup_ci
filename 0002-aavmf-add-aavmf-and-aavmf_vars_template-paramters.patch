@@ -24,7 +24,7 @@ index 08f5e3a..62a3f67 100644
 +            aavmf = params.get("aavmf")
 +            if not aavmf:
 +                aavmf = "/usr/share/AAVMF/AAVMF_CODE.fd"
-+            aavmf_code = ("-drive file=%s,if=pflash,format=raw,unit=0,readonly=on", aavmf)
++            aavmf_code = ("-drive file=%s,if=pflash,format=raw,unit=0,readonly=on" % aavmf)
              devices.append(qdevices.QStringDevice('AAVMF_CODE',
                                                    cmdline=aavmf_code))
 +            aavmf_vars_template = params.get("aavmf_vars_template")
@@ -50,7 +50,7 @@ index 08f5e3a..62a3f67 100644
 +            aavmf = params.get("aavmf")
 +            if not aavmf:
 +                aavmf = "/usr/share/AAVMF/AAVMF_CODE.fd"
-+            aavmf_code = ("-drive file=%s,if=pflash,format=raw,unit=0,readonly=on", aavmf)
++            aavmf_code = ("-drive file=%s,if=pflash,format=raw,unit=0,readonly=on" % aavmf)
              devices.append(qdevices.QStringDevice('AAVMF_CODE',
                                                    cmdline=aavmf_code))
 +            aavmf_vars_template = params.get("aavmf_vars_template")
