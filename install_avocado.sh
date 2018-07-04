@@ -29,7 +29,8 @@ sed -i 's#proxy string.*#proxy string '"$HTTP_PROXY"'#' *.preseed
 cp *.preseed ~/.local/lib/python2.7/site-packages/shared/unattended/
 cp *.ini ~/.local/lib/python2.7/site-packages/shared/downloads/
 cp 16.04.3-server.aarch64.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Ubuntu
-cp 9.3.0.aarch64.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Debian
+cp 9.4.0.aarch64.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Debian
+cp 9.4.0.armhf.cfg ~/.local/lib/python2.7/site-packages/shared/cfg/guest-os/Linux/Debian
 
 # after merging, we can remove it
 cp *.patch ~/.local/lib/python2.7/site-packages/
