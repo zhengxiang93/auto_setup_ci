@@ -76,7 +76,7 @@ fi
 
 echo 'Avocado Data Directory: '$DATA_DIR
 
-CONFIG_DIR=$DATA_DIR/avocado-vt/backends/cfg
+CONFIG_DIR=$DATA_DIR/avocado-vt/backends/qemu/cfg
 
 # Copy Avocado-VT config file
 if [[ -w "$CONFIG_DIR" ]]; then
